@@ -11,7 +11,7 @@ A Google Apps Script pipeline that scans Gmail from authorised senders, extracts
   - Origin / destination (labels or inline “from/to” text)
   - Vehicle counts (truck/van/car)
 - Writes one row per dispatchable “move” into a `Jobs` sheet
-- Optionally calculates distance and duration via Google Maps Directions
+- Calculates distance and duration via Google Maps Directions for job cost estimation
 - Dedupe key prevents duplicate job creation:
   `SourceEmailId + Date + Time + Origin + Destination`
 
@@ -36,3 +36,4 @@ Create a Google Sheet with a `Jobs` tab and headers including (example):
 - Add support for attachments (PDF OCR) if needed
 - Expand parsing patterns for more email formats
 - Add structured logging and alerting for parsing failures
+- Adding function to automatically designate and contact operatives for each job leg with simple text message webhook
